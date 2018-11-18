@@ -16,5 +16,6 @@ namespace WebStore.Models
         public string ImageThumbnailUrl { get; set; }
         public bool IsCakeOfTheWeek { get; set; }
         public bool IsInStock { get; set; }
+
     }
 }
