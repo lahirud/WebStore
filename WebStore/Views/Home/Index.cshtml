@@ -1,0 +1,10 @@
+﻿@model IEnumerable<WebStore.Models.Cake>
+
+   <h1>@ViewBag.Title</h1>
+    <div>
+        @foreach (var cake in Model)
+        {
+            <div>@cake.Name</div>
+            <div>@cake.Price.ToString("c")</div>
+        }
+    </div>
