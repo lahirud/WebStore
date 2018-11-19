@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.Models;
+using WebStore.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,9 +21,15 @@ namespace WebStore.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            ViewBag.Title = "Welcome to Cake Shop!";
+            //ViewBag.Title = "Welcome to Cake Shop!";
             var cakes = _cakeRepository.GetAllCakes();
-            return View(cakes);
+
+            var cakeViewModel = new HomeViewModel()
+            {
+                Title = "Welcome to Cake Shop!",
+                Cakes = cakes
+            };
+            return View(cakeViewModel);
         }
     }
 }
