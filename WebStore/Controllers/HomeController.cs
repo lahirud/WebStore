@@ -31,5 +31,15 @@ namespace WebStore.Controllers
             };
             return View(cakeViewModel);
         }
+
+        public IActionResult Detail(int id)
+        {
+            var cake = _cakeRepository.GetCakeById(id);
+            if (cake == null)
+                return NotFound();
+
+            return View(cake);
+
+        }
     }
 }

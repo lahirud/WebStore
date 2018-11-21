@@ -14,6 +14,7 @@ namespace WebStore.Models
         }
 
         public DbSet<Cake> Cakes { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
     }
 
 }
