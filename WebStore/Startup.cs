@@ -25,7 +25,7 @@ namespace WebStore
         {
 
             // services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source=webstore.db"));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("SqliteConnection")));
             services.AddTransient<IRepository, CakeRepository>();
             services.AddTransient<IFeedbackRepository, FeedbackRepository>();
             services.AddMvc();
