@@ -3,3 +3,5 @@
 WebStore/obj/
 WebStore/bin/
 WebStore/webstore.db
+WebStoreUnitTests/obj
+WebStoreUnitTests/bin

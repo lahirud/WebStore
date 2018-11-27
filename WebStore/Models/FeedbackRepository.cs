@@ -13,6 +13,11 @@ namespace WebStore.Models
         {
             _appDbContext = appDbContext; 
         }
+        
+        public IEnumerable<Feedback> GetAll()
+        {
+            return _appDbContext.Feedbacks.ToList();
+        }
 
         public void AddFeedback(Feedback feedback)
         {

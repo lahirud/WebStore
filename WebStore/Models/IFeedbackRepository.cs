@@ -7,6 +7,7 @@ namespace WebStore.Models
 {
     public interface IFeedbackRepository
     {
+        IEnumerable<Feedback> GetAll();
         void AddFeedback(Feedback feedback);
     }
 }
