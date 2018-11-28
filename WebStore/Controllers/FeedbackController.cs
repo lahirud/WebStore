@@ -35,7 +35,14 @@ namespace WebStore.Controllers
                 _feedbackRepository.AddFeedback(feedback);
                 return RedirectToAction("FeedbackComplete");
             }
-            return View(feedback);
+
+            var feedbackViewModel = new FeedbackViewModel();
+            var feedbacks = _feedbackRepository.GetAll();
+
+            feedbackViewModel.Feedbacks = feedbacks;
+            feedbackViewModel.PostData = feedback;
+
+            return View(feedbackViewModel);
 
         }
 
