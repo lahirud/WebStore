@@ -1,3 +1,5 @@
 .vs/
-WebStore/bin
-WebStore/obj
+.vscode/
+WebStore/obj/
+WebStore/bin/
+WebStore/webstore.db
